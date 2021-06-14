@@ -16,6 +16,8 @@ public class ControlTaskMain {
             }
         }
         Sort.sortMinMax(mas);
+        System.out.println("////////");
+        Sort.sortMaxMin(mas);
     }
 }
 
