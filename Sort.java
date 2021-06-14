@@ -24,7 +24,6 @@ public class Sort {
         for (int i = 0; i < mas.length; i++) {
             System.out.println(mas[i]);
         }
-        System.out.flush();
     }
     public static void maxMin(int[] mas){
         Sort.sortMinMax(mas);
