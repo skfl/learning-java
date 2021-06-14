@@ -4,7 +4,7 @@ package controlTask.b;
 
 public class ControlTaskMain {
     public static void main(String[] args){
-        args = new String[]{"2","3","5","13"};
+        args = new String[]{"3","1","11","41","10","2"};
         //...
         int[] mas = new int[args.length];
         for(int i=0;i< args.length;i++){
@@ -15,7 +15,7 @@ public class ControlTaskMain {
                 mas[i] = 0;
             }
         }
-        Division.isPrime(mas);
+        Sort.sortMinMax(mas);
     }
 }
 
