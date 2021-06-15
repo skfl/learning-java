@@ -3,7 +3,7 @@ package controlTask.b;
 
 public class ControlTaskMain {
     public static void main(String[] args) {
-        args = new String[]{"32", "22", "111", "141", "10", "21", "101"};
+        args = new String[]{"303","133","881","001","1","22"};
         int[] mas = new int[args.length];
         for (int i = 0; i < args.length; i++) {
             try {
@@ -12,7 +12,7 @@ public class ControlTaskMain {
                 mas[i] = 0;
             }
         }
-        Palindrome.isPalindrome(args);
+        TripleNumCheck.checkForRepeatedNums(args);
     }
 }
 
