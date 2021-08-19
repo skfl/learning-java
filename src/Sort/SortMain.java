@@ -1,7 +1,10 @@
+/**
+ * A program that sort arrays
+ * @author Skfl
+ * @version 1.0
+ */
 package Sort;
 
-import javax.swing.*;
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Arrays;
 import java.util.Random;
 
