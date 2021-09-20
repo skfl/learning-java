@@ -1,35 +1,42 @@
 package stepik;
 
-import com.sun.source.tree.NewArrayTree;
+
 import stepik.mergeSort.MergeSort;
-import stepik.mergeSort.MergeSort2;
 
 import java.util.Arrays;
 import java.util.Random;
 
 public class StepikMain {
     public static void main(String[] args) {
+        String[] roles = {
+                "Городничий", "Аммос Федорович",
+                "Артемий Филиппович",
+                "Лука Лукич"};
+        String[] textLines = {
+                "Городничий: Я пригласил вас, господа, с тем, чтобы сообщить вам пренеприятное известие: к нам едет ревизор.",
+                "Аммос Федорович: Как ревизор?",
+                "Артемий Филиппович: Как ревизор?",
+                "Городничий: Ревизор из Петербурга, инкогнито. И еще с секретным предписаньем.",
+                "Аммос Федорович: Вот те на!",
+                "Артемий Филиппович: Вот не было заботы, так подай!",
+                "Лука Лукич: Господи боже! еще и с секретным предписаньем!"};
 
+        StringBuilder s = new StringBuilder();
+        StringBuilder role = new StringBuilder();
+        int index = 0;
 
-        Random rndm = new Random();
-        int[] rnd1 = new int[5];
-        for(int i=0;i<rnd1.length;i++){
-            rnd1[i] = rndm.nextInt(10);
+        for (int i = 0; i < roles.length; i++) {
+            role.append(roles[i]);
+            role.append(":\n");
         }
-        int[] rnd2 = new int[5];
-        for(int i=0;i<rnd2.length;i++){
-            rnd2[i] = rndm.nextInt(10);
-        }
-/*        int[] rnd1 = new int[]{1, 1, 7, 7, 8};
-        int[] rnd2 = new int[]{1, 2, 3, 5, 7};*/
+        String res = role.toString();
+        System.out.println(res);
 
 
-        Arrays.sort(rnd1);
-        Arrays.sort(rnd2);
-        System.out.println(Arrays.toString(rnd1));
-        System.out.println(Arrays.toString(rnd2));
-        int res[];
-        res = MergeSort2.mergeSort(rnd1, rnd2);
-        System.out.println(Arrays.toString(res));
+
+
+        int v = 0;
+        StringBuilder n = new StringBuilder(roles[1]);
+
     }
 }
