@@ -17,7 +17,7 @@ public class GaussMethod {
                 res = toOneString(res, n, m, strNum);
                 res = takeAway(res, strNum, i);
                 strNum += 1;
-                output(res);
+
             }
         }
 
@@ -25,6 +25,18 @@ public class GaussMethod {
     }
 
     public static void output(double[][] arr) {
+        for (int j = 0; j < arr.length; j++) {
+            for (int i = 0; i < arr[0].length; i++) {
+                System.out.print(arr[j][i]);
+                System.out.print(" ");
+            }
+            System.out.println("");
+        }
+        System.out.println(" ");
+
+    }
+
+    public static void outputbd(double[][] arr) {
         for (int j = 0; j < arr.length; j++) {
             for (int i = 0; i < arr[0].length; i++) {
                 System.out.print(arr[j][i]);
@@ -99,15 +111,15 @@ public class GaussMethod {
         double[] ans;
         ans = gaussMethodBack(res);
         ans = getAns();
-        System.out.println(Arrays.toString(ans)+ " is answer");
+        System.out.println(Arrays.toString(ans) + " is answer");
         return ans;
     }
 
     public static double[] getAns() {
         double[] ans = new double[3];
-        ans[0]=-4;
-        ans[1]=0.6;
-        ans[2]=-0.2;
+        ans[0] = -4;
+        ans[1] = 0.6;
+        ans[2] = -0.2;
         return ans;
     }
 

@@ -30,8 +30,10 @@ public class LUDecompose {
                 }
             }
         }
-
+        System.out.println("L matrix");
         GaussMethod.output(L);
+        System.out.println("\n");
+        System.out.println("U matrix");
         GaussMethod.output(U);
     }
 
@@ -103,13 +105,13 @@ public class LUDecompose {
 
         for (int i = 0; i < U.length; i++) {
             for (int j = 0; j < U[0].length; j++) {
-                newU[i][j]=U[i][j];
+                newU[i][j] = U[i][j];
             }
         }
         GaussMethod.output(newU);
         double[] ans = LyB(A);
-        for(int i =0;i< newU.length;i++){
-            newU[i][newU[0].length-1]=ans[i];
+        for (int i = 0; i < newU.length; i++) {
+            newU[i][newU[0].length - 1] = ans[i];
         }
         GaussMethod.output(newU);
         return newU;
@@ -126,7 +128,7 @@ public class LUDecompose {
     public static void YuX(double[][] A) {
         double[] res;
         double[][] U = getNewU(A);
-        res = GaussMethod.gaussAnswer(U,4,3);
+        res = GaussMethod.gaussAnswer(U, 4, 3);
         System.out.println(Arrays.toString(res));
     }
 }
