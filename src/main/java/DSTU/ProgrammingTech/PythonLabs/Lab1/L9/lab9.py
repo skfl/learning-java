@@ -64,10 +64,15 @@ join_data(get_string(arr, 8))
 C = list()
 f = open("AB.txt", "r+")
 tmp = f.readlines()
+new_tmp = []
+
 for i in range(len(tmp)):
-    for j in range(len(tmp[i])):
-        if tmp[i][j].isnumeric():
-            C.append(tmp[i][j])
+    new_tmp = tmp[i].split(" ")
+    for j in range(len(new_tmp)):
+        new_tmp[j] = new_tmp[j].strip().replace(",","").replace("[","").replace("]","")
+        C.append(int(new_tmp[j]))
+
+
 for i in range(len(C)):
     C[i] = int(C[i])
 
@@ -87,5 +92,5 @@ def check_for_repeated(arr):
         i = cnt
 
 # C.sort()
-# print(C)
+
 # check_for_repeated(C)
