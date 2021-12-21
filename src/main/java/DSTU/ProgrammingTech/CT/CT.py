@@ -69,6 +69,8 @@ get_C2(C)
 
 f = open('Рогачков Эдуард Мурманович.txt',"a+")
 f.writelines(get_b(A))
+f.writelines("\n")
 f.writelines(get_C2(C))
+f.writelines("\n")
 f.writelines(get_KNUM(S))
 
